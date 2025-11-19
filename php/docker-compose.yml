@@ -1,0 +1,7 @@
+services:
+  php:
+    image: php:8.4.14-apache
+    volumes:
+      - './:/var/www/html' # Sync project dir with container web dir (php files folder)
+    ports:
+      - 8080:80
