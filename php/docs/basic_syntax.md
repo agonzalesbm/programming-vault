@@ -184,3 +184,7 @@ $sum = function ($a, $b) {
 // Arrow functions from PHP 7.4+ (Similar to JS arrow function)
 $sum = fn ($a, $b) => $a + $b;
 ```
+
+# Namespace
+- Define on class file: `namespace App\Http\Controllers`.
+- Use on file: `use App\Models\User`.
