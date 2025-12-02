@@ -42,6 +42,14 @@ $arr = ['Alice', 'Bob'];
 // pair-key
 $arr = ['id' => 1, 'name' => 'Charlie']
 ?>
+
+// adding elements
+$arr = ['1', '2'];
+$arr[] = '3'; // Adds '3' to the end
+
+// adding elements to associative array
+$arr = ['1' => 1, '2' => 2];
+$arr['3'] = 3;
 ```
 
 - `object`: class instance
