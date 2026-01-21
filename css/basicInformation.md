@@ -251,7 +251,44 @@ h1 {
 | **Height** | Use **auto** or **min-height: 100vh** for hero sections. | **100vh** works well here too, but be careful of mobile browser bars. |
 | **Spacing** | **1rem** (16px) is standard for padding/margins. | Increase to **2rem** or **3rem** as white space becomes more available. |
 
+## Flexbox
+
+* **Flex container:** Parent.
+* **Flex items:** Children.
+* **Main axis:** Primary direction items, "horizontal".
+* **Cross axis:** Perpendicular direction to the main axis, "vertical".
+
+| Property | Values |
+| --- | --- |
+| display | flex (Enable flexbox content) |
+| flex-direction | row, row-reverse, column, column-reverse |
+| justify-content | start, center, space-between, space-around, space-evenly |
+| align-items | center, stretch, start, end |
+| flex-wrap | nowrap, wrap |
+| gap | e.g. 10px, 1rem |
+
+### Child properties
+
+These properties allow individual items to behave differently than their siblings.
+
+* *flex-grow*: Defines the ability for an item to grow if necessary. flex-grow: 1; tells the item to take up all available remaining space.
+* *flex-shrink*: Defines the ability for an item to shrink if the container is too small.
+* *flex-basis*: The default size of an element before the remaining space is distributed.
+* *align-self*: Allows a single item to override the container's align-items value.
+
+### Flex short-hand
+
+Instead of writing grow, shrink, and basis separately, developers use the `flex` property.
+
+```css
+.item {
+  /* flex: [grow] [shrink] [basis] */
+  flex: 1 0 200px;
+}
+```
+
 ## Grid
+
 * **Grid container:** Element where `diplay: grid` is applied.
 * **Grid item:** Direct children of the container.
 * **Grid track:** Space between rows and columns.
@@ -338,6 +375,18 @@ Grid uses the same logic as Flexbox but in two directions.
 | align-items | Block (Vertical) | Aligns items insside their cell vertically |
 | justify-content | Inline (Horizontal) | Aligns the entire inside the container |
 | align-content | Block (Vertical) | Aligns the entire grid vertically |
+
+***Flexbox vs. Grid: When to use which?***
+Use Flexbox for small-scale layouts, like a navigation bar, a row of buttons, or centering a single element.
+
+Use Grid for the overall layout of the page (header, sidebar, main, footer) or complex overlapping designs.
+
+| Feature | Flexbox | CSS Grid |
+| --- | --- | --- |
+| Dimensions | 1D (Row OR Column) | 2D (Rows and Columns) |
+| Alignment | Content-driven (Items push space) | Continer-dirven (Items fill cells) |
+| Overlap | Difficult | Easy (using grid lines) |
+| Use case | Navbars, buttons, Sidebars | Page layouts, Photo Galleries |
 
 
 ### Centering Everything
