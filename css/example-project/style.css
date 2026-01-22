@@ -1,0 +1,15 @@
+body {
+  outline: solid 4px dodgerblue;
+}
+
+.main-header {
+  /* border-bottom: 2px solid #000; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links {
+  display: flex;
+  gap: 0.8rem;
+}
