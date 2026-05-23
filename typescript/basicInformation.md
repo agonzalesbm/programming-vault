@@ -12,7 +12,7 @@ var bool: boolean = true
 let hobbies: string[] = ["reading", "hacking"];
 
 // OOP
-interface Person : {
+interface Person {
   name: string
   age: number
 }
@@ -25,7 +25,7 @@ let person: Person = { name: "Bob", age: 25 };
 // Square Brackets Notation
 let numArr: number[] = [1, 2, 3]
 let strArr: string[] = ["1", "2", "3"]
-let mixed: (string | number) = ["Apple", 1] // Union type
+let mixed: (string | number)[] = ["Apple", 1] // Union type
 
 // Generic Array Type
 let numbers: Array<number> = [1, 2, 3];
